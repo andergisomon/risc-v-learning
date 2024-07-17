@@ -1,5 +1,7 @@
 # RISC-V Assembly Learning
-Code I wrote to document my learning journey with RISC-V assembly on the ESP32-C3.
+Code I wrote to document my learning journey with RISC-V assembly on the ESP32-C3. You may build for a different SoC, changing your ESP IDF project target as appropriate.
+
+Board used: Seeed XIAO ESP32C3
 
 To compile the assembly source: Simply git clone and run the following commands in the project directory:
 
