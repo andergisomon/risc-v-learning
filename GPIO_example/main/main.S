@@ -3,7 +3,7 @@
 	.global	init_gpio
 
 init_gpio:
-	.equ GPIO_OUT_W1TS_REG, 0x60004008		# 0x6000 for peripherals, 0x....4000 for GPIO, and )x....,...C for GPIO_OUT_W1TS_REG
+	.equ GPIO_OUT_W1TS_REG, 0x60004008		# 0x6000 for peripherals, 0x....4000 for GPIO, and 0x....,...C for GPIO_OUT_W1TS_REG
 	.equ GPIO_OUT_W1TC_REG, 0x6000400C		# Same logic as above line
 	.equ GPIO_ENABLE_REG, 0x60004024		# Same logic as above line
 	.equ GPIO_IN_REG, 0x6000403C			# Read-only register for digitalRead of GPIO
