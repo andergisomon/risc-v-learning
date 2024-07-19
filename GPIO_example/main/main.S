@@ -40,13 +40,14 @@ loop:
 	li t1, GPIO_IN_REG
 	lw t2, 0(t1)
 	srli t2, t2, 4					# Shift GPIO_IN_REG contents 4 places to the right, adjusting for the position encoding of GPIO_IN_REG
-	andi t2, t2, 0b1						
+	andi t2, t2, 0b1				# Bitmask the rest of the register contents, except 0th bit
 
 # Reserve register t3 for SW2 status
 	li t1, GPIO_IN_REG
 	lw t3, 0(t1)
 	srli t3, t3, 5					# Shift GPIO_IN_REG contents 5 places to the right
-	andi t3, t3, 0b1
+	andi t3, t3, 0b1				# Bitmask the rest of the register contents, except 0th bit
+
 
     and t4, t2, t3                         		# Check if both SW1 and SW2 are pressed, store result in t4
     bnez t4, Both_SW1_SW2_pressed_action
